@@ -56,9 +56,15 @@ android {
 
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2025.01.00")
+    val kotlinBom = platform("org.jetbrains.kotlin:kotlin-bom:1.9.24")
 
     implementation(composeBom)
     androidTestImplementation(composeBom)
+    implementation(kotlinBom)
+    androidTestImplementation(kotlinBom)
+
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24")
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
