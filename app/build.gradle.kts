@@ -97,9 +97,9 @@ dependencies {
 
 configurations.configureEach {
     resolutionStrategy.eachDependency {
-        if (requested.group == "org.jetbrains.kotlin") {
+        if (requested.group == "org.jetbrains.kotlin" && requested.name.startsWith("kotlin-stdlib")) {
             useVersion("1.9.24")
-            because("Keep Kotlin compiler/plugin/runtime metadata compatible in CI")
+            because("Keep Kotlin stdlib aligned with Kotlin 1.9.24 compiler")
         }
     }
 }
